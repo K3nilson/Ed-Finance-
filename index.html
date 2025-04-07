@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed-finance</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div id="dashboard" class="container">
+        <h2>Controle de Despesas</h2>
+        <div class="saldo-container">
+            <h4>Saldo Atual</h4>
+            <h1 id="saldo">AOA 0,00</h1>
+        </div>
+        <div class="resumo">
+            <div class="receitas">Receitas: AOA <span id="totalReceitas">0,00</span></div>
+            <div class="despesas">Despesas: AOA <span id="totalDespesas">0,00</span></div>
+        </div>
+        <h3>Adicionar Transação</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="desc">Descrição</label>
+                <input type="text" id="desc" placeholder="Nome da transação">
+            </div>
+            <div class="form-control">
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" placeholder="Valor da transação">
+            </div>
+            <div class="form-control">
+                <label for="categoria">Categoria</label>
+                <select id="categoria">
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Vestuário">Vestuário</option>
+                    <option value="Beleza">Beleza</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Assinaturas e Serviços">Assinaturas e Serviços</option>
+                    <option value="Investimentos">Investimentos</option>
+                    <option value="Doações">Doações</option>
+                    <option value="Viagens">Viagens</option>
+                    <option value="Eletrônicos">Eletrônicos</option>
+                    <option value="Pets">Pets</option>
+                    <option value="Outros">Outros</option>                    
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="data">Data</label>
+                <input type="date" id="data">
+            </div>
+            <div class="form-control">
+                <label for="tipo">Tipo</label>
+                <select id="tipo">
+                    <option value="ganho">Receita</option>
+                    <option value="gasto">Despesa</option>
+                </select>
+            </div>
+            <button class="btn" type="button" onclick="adicionarTransacao()">Adicionar</button>
+        </form>
+        <h3>Histórico</h3>
+        <div class="historico">
+            <table>
+                <tr>
+                    <th>Valor</th>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Tipo</th> <!-- Nova coluna para Tipo -->
+                </tr>
+                <tbody id="transacoes"></tbody>
+            </table>
+        </div>
+        <button class="btn" onclick="logout()">Sair</button>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+</html>
+

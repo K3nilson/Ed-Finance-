@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed-finance/Login e Cadastro</title>
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <h2 id="form-title">Login</h2>
+        <div class="form-control">
+            <label for="username">Nome</label>
+            <input type="text" id="username" placeholder="Digite seu nome">
+        </div>
+        <div class="form-control">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+        <button class="btn" onclick="processar()">Entrar</button>
+        <p class="toggle" onclick="alternarCadastro()">Não tem uma conta? Cadastre-se</p>
+    </div>
+
+    <script src="./script/login.js"></script>
+</body>
+</html>
+
