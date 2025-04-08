@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed-Finance</title>
+    <link rel="stylesheet" href="/styles/cadastro.css">
+</head>
+<body>
+
+<div class="form-container">
+    <div class="step-indicator">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <form id="multi-step-form">
+        <!-- Step 1 -->
+        <div class="form-step active">
+            <h2>Informações de Renda</h2>
+            <label for="monthly-income">Qual é a sua renda mensal média?</label>
+            <input type="number" id="monthly-income" name="monthly_income" placeholder="Ex.: 2000">
+
+            <label for="income-source">Quais são suas principais fontes de renda?</label>
+            <select id="income-source" name="income_source">
+                <option value="">Selecione</option>
+                <option value="emprego">Emprego fixo</option>
+                <option value="freelance">Freelance</option>
+                <option value="negocio">Negócio próprio</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <button type="button" class="next">Próximo</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="form-step">
+            <h2>Informações de Trabalho</h2>
+            <label for="job-type">Qual é o seu tipo de trabalho?</label>
+            <select id="job-type" name="job_type">
+                <option value="">Selecione</option>
+                <option value="clt">Integral</option>
+                <option value="autonomo">Autônomo</option>
+                <option value="desempregado">Desempregado</option>
+            </select>
+
+            <label for="work-hours">Quantas horas você trabalha por semana?</label>
+            <input type="number" id="work-hours" name="work_hours" placeholder="Ex.: 40">
+
+            <button type="button" class="prev">Voltar</button>
+            <button type="button" class="next">Próximo</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step">
+            <h2>Gastos Mensais</h2>
+            <label for="monthly-expenses">Qual é a média dos seus gastos mensais?</label>
+            <input type="number" id="monthly-expenses" name="monthly_expenses" placeholder="Ex.: 1500">
+
+            <label for="expense-categories">Com o que você mais gasta?</label>
+            <select id="expense-categories" name="expense_categories">
+                <option value="">Selecione</option>
+                <option value="moradia">Moradia</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="lazer">Lazer</option>
+                <option value="transporte">Transporte</option>
+                <option value="saude">Saúde</option>
+            </select>
+
+            <button type="button" class="prev">Voltar</button>
+            <button type="button" class="next">Próximo</button>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="form-step">
+            <h2>Objetivos</h2>
+            <label for="financial-goal">O que você pretende alcançar com este app?</label>
+            <input type="text" id="financial-goal" name="financial_goal" placeholder="Ex.: Economizar mais">
+
+            <label for="tracking-preference">Como você prefere acompanhar seus gastos?</label>
+            <select id="tracking-preference" name="tracking_preference">
+                <option value="">Selecione</option>
+                <option value="diario">Diariamente</option>
+                <option value="semanal">Semanalmente</option>
+                <option value="mensal">Mensalmente</option>
+            </select>
+
+            <button type="button" class="prev">Voltar</button>
+            <button type="button" class="next">Próximo</button>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="form-step">
+            <h2>Finalização</h2>
+            <p>Obrigado por fornecer suas informações. Agora você está pronto para começar a usar nosso app!</p>
+            <button type="button" class="prev">Voltar</button>
+            <button type="submit">Finalizar</button>
+        </div>
+    </form>
+</div>
+
+    <script src="/script/cadastro.js"></script>
+</body>
+</html>
